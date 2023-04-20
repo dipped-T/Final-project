@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root{
+	--primary-color:#124887;
+	--secondary-color:#E43F31;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	position: relative;
+}
+main{
+	min-height: 100vh;
+	padding: 5rem 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	display: block;
+	text-decoration: none;
+}
+p a{
+	display: inline;
+}
+p{
+	margin-bottom: 1rem;
+}
+img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+h1,h2,h3,h4,p,li,a,div,label,input,select,textarea{
+	font-family: "Montserrat",sans-serif;
+}
+h1{
+	text-transform: capitalize;
+	margin-bottom: 2rem;
+}
+.container{
+	width: 90%;
+	margin:0 auto;
+}
+.flex{
+	display: flex;
+}
+.justify-between{
+	justify-content: space-between;
+}
+.justify-start{
+	justify-content: flex-start;
+}
+.justify-end{
+	justify-content: flex-end;
+}
+.align-center{
+	align-items: center;
+}
+.align-start{
+	align-items: flex-start;
+}
+.align-end{
+	align-items: flex-end;
+}
+.align-stretch{
+	align-items: stretch;
+}
+.text-center{
+	text-align: center;
+}
+.dark-mode-background{
+	background-color: #232928 !important;
+}
+.dark-mode-color{
+	color: #fff !important;
+}
+/*********************Forms************************/
+.signin-signup-form-wrapper{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-30%);
+	min-width: 450px;
+	padding: 2rem;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+}
+label{
+	font-weight: 600;
+}
+input[type="text"],input[type="email"],input[type="password"],input[type="range"],input[type="date"],input[type="range"],select,textarea,label{
+	display: block;
+}
+input[type="range"]{
+	width: 100%;
+}
+input[type="text"],input[type="email"],input[type="password"],input[type="date"],select,textarea{
+	width: 100%;
+	padding: .5rem;
+	margin:.5rem 0;
+	outline: none;
+}
+input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus,input[type="date"]:focus,select:focus,textarea:focus{
+	border:1px solid var(--primary-color);
+}
+input[type="checkbox"] + label, input[type="radio"] + label{
+	display: inline-block;
+}
+button{
+	display: block;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: .5rem 1rem;
+	margin:1rem 0;
+	border: none;
+	border-radius: 0;
+	cursor: pointer;
+}
+button.submit-button{
+	background-color: var(--primary-color);
+	color: #fff;
+}
+/***********************Header**********************/
+#header{
+	box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+}
+
+.header-wrapper{
+	padding: 1rem 0;
+}
+.main-nav-menu li{
+	margin: 0 1rem;
+}
+.main-nav-menu li a{
+	padding: .5rem 1rem;
+	color: var(--primary-color);
+}
+.main-nav-menu li a:hover{
+	font-weight: 600;
+}
+.light-mode-icon{
+	width: 30px;
+	height: 30px;
+}
+/**********************User Pages*******************/
+.user-dashboard-menu-links .user-dashboard-menu-link a{
+	font-size: 1.25rem;
+	font-weight: 500;
+	background-color: var(--primary-color);
+	color: #fff;
+	border-radius: 10px;
+	padding: .5rem 1rem;
+	margin: 0 1rem;
+}
+.goal-mood-cards{
+	padding: 2rem 0;
+}
+.goal-mood-cards .goal-mood-card{
+	padding:2rem;
+	margin:.5rem;
+	border-radius: 15px;
+	box-shadow: 0 0 5px 2px rgba(0,0,0,.2);
+}
+.goal-mood-cards .goal-mood-card .card-title{
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.goal-mood-cards .goal-mood-card .card-date{
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.goal-mood-cards .goal-mood-card .card-buttons a{
+	font-size: .9rem;
+}
+
+.mood-labels{
+	width: 100%;
+	margin: 1rem 0;
+}
+
+.mood-tracking-chart{
+	position: relative;
+	width: 80%;
+	height: 500px;
+	border:1px solid #000;
+	margin:1rem auto;
+}
+.mood-tracking-chart-label{
+	position: absolute;
+	right: 100%;
+	padding: .5rem 1rem;
+	font-weight: 600;
+}
+.mood-tracking-chart-label.happiest{
+	top: 0;
+}
+.mood-tracking-chart-label.lowest{
+	bottom: 0;
+}
+.mood-bar{
+	position: relative;
+	cursor: pointer;
+	max-width: 80px;
+}
+.mood-bar:nth-child(2n){
+	background-color: var(--primary-color);
+}
+.mood-bar:nth-child(2n+1){
+	background-color: var(--secondary-color);
+}
+.mood-bar:hover{
+	background-color: #000;
+}
+.mood-date{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%,200%) rotate(-45deg);
+	color: #000;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin:0 10px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
